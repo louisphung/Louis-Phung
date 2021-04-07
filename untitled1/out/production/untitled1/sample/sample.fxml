@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="305.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="zeroGetName" layoutX="96.0" layoutY="296.0" mnemonicParsing="false" onAction="#AddZero" prefHeight="25.0" prefWidth="42.0" text="0" />
+      <Button fx:id="nighGetName" layoutX="161.0" layoutY="260.0" mnemonicParsing="false" onAction="#AddNigh" prefHeight="25.0" prefWidth="42.0" text="9" />
+      <Button fx:id="eightGetName" layoutX="161.0" layoutY="223.0" mnemonicParsing="false" onAction="#AddEight" prefHeight="25.0" prefWidth="42.0" text="8" />
+      <Button fx:id="sevenGetName" layoutX="161.0" layoutY="188.0" mnemonicParsing="false" onAction="#AddSeven" prefHeight="25.0" prefWidth="42.0" text="7" />
+      <Button fx:id="sixGetName" layoutX="96.0" layoutY="260.0" mnemonicParsing="false" onAction="#AddSix" prefHeight="25.0" prefWidth="42.0" text="6" />
+      <Button fx:id="fiveGetName" layoutX="96.0" layoutY="223.0" mnemonicParsing="false" onAction="#AddFive" prefHeight="25.0" prefWidth="42.0" text="5" />
+      <Button fx:id="fourGetName" layoutX="96.0" layoutY="188.0" mnemonicParsing="false" onAction="#AddFour" prefHeight="25.0" prefWidth="42.0" text="4" />
+      <Button fx:id="threeGetName" layoutX="26.0" layoutY="260.0" mnemonicParsing="false" onAction="#AddThree" prefHeight="25.0" prefWidth="42.0" text="3" />
+      <Button fx:id="twoGetName" layoutX="26.0" layoutY="223.0" mnemonicParsing="false" onAction="#AddTwo" prefHeight="25.0" prefWidth="42.0" text="2" />
+      <Button fx:id="oneGetName" layoutX="26.0" layoutY="188.0" mnemonicParsing="false" onAction="#AddOne" prefHeight="25.0" prefWidth="42.0" text="1" />
+      <Button fx:id="AdditionGetName" layoutX="223.0" layoutY="157.0" mnemonicParsing="false" onAction="#Addition" prefHeight="44.0" prefWidth="61.0" text="+">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="SubtractionGetName" layoutX="223.0" layoutY="214.0" mnemonicParsing="false" onAction="#Subtraction" prefHeight="44.0" prefWidth="61.0" text="-">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="DivisionGetName" layoutX="223.0" layoutY="331.0" mnemonicParsing="false" onAction="#Division" prefHeight="44.0" prefWidth="61.0" text="/">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="MultiplicationGetName" layoutX="223.0" layoutY="271.0" mnemonicParsing="false" onAction="#Multiplication" prefHeight="44.0" prefWidth="61.0" text="*">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelDisplay" layoutX="75.0" layoutY="91.0" prefHeight="44.0" prefWidth="156.0">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
