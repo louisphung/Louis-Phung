@@ -1,12 +1,34 @@
 package sample;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 import java.util.ArrayList;
 
 public class Controller {
     public Label labelDisplay;
-    private ArrayList
+    public Button equalGetName;
+    public Button zeroGetName;
+    public Button nighGetName;
+    public Button eightGetName;
+    public Button sevenGetName;
+    public Button sixGetName;
+    public Button fiveGetName;
+    public Button fourGetName;
+    public Button threeGetName;
+    public Button twoGetName;
+    public Button oneGetName;
+    public Button AdditionGetName;
+    public Button SubtractionGetName;
+    public Button DivisionGetName;
+    public Button MultiplicationGetName;
+    public Button ClearGetName;
+
+    String operators;
+    int sNumber;
+    int fNumber;
+    int result;
+
 
     public void AddZero(ActionEvent actionEvent) {
         addNumber("0");
@@ -60,17 +82,54 @@ public class Controller {
     }
 
     public void Addition(ActionEvent actionEvent) {
-        numbers.add(labelDisplay.getText());
+        fNumber = Integer.parseInt(labelDisplay.getText());
         labelDisplay.setText("0");
-        operators.add(Addition);
+        operators = "+";
     }
 
     public void Subtraction(ActionEvent actionEvent) {
+        fNumber = Integer.parseInt(labelDisplay.getText());
+        labelDisplay.setText("0");
+        operators = "-";
     }
 
     public void Division(ActionEvent actionEvent) {
+        fNumber = Integer.parseInt(labelDisplay.getText());
+        labelDisplay.setText("0");
+        operators = "/";
+    }
+    public void Multiplication(ActionEvent actionEvent) {
+        fNumber = Integer.parseInt(labelDisplay.getText());
+        labelDisplay.setText("0");
+        operators = "*";
+    }
+    public void Clear(ActionEvent actionEvent) {
+        labelDisplay.setText("0");
+        this.sNumber = 0;
+        this.fNumber = 0;
+    }
+    public void Equal(ActionEvent actionEvent) {
+        String answer;
+        sNumber = Integer.parseInt(labelDisplay.getText());
+        if (operators == "+") {
+            result = fNumber + sNumber;
+            answer = Integer.toString(result);
+            labelDisplay.setText(answer);
+        } else if (operators == "-") {
+            result = fNumber - sNumber;
+            answer = Integer.toString(result);
+            labelDisplay.setText(answer);
+        } else if (operators == "*") {
+            result = fNumber * sNumber;
+            answer = Integer.toString(result);
+            labelDisplay.setText(answer);
+        } else if (operators == "/") {
+            result = fNumber / sNumber;
+            answer = Integer.toString(result);
+            labelDisplay.setText(answer);
+        }
+
     }
 
-    public void Multiplication(ActionEvent actionEvent) {
-    }
+
 }
