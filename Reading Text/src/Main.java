@@ -1,29 +1,36 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
-
 public class Main {
-    public static void main(String[] args) throws IOException{
+
+    public static ArrayList<String> lines = new ArrayList<>();
+
+    public static void main(String[] args) throws IOException {
         FileReader fr = new FileReader("ProgrammingHistory.txt");
-        BufferedReader br = new BufferedReader((fr));
-        ArrayList<String> lines = new ArrayList<>();
+        BufferedReader br = new BufferedReader(fr);
         String line;
-        while ((line = br.readLine()) != null){
-            System.out.println("Just read:" + line);
+        while ((line = br.readLine()) != null) {
+            System.out.println(line);
             lines.add(line);
         }
         br.close();
         for (int i = 0; i < lines.size(); i++) {
-            lines.get(i);
-            System.out.println(lines.get(1));
-            if (lines.get(i) == "."){
-                String[] item = lines.toArray(new String[lines.size()]);
-                for (String s : item) {
-                    System.out.println(s);
-                }
-            }
             System.out.println(lines.get(i));
-
-
+        }
+        System.out.println("\n");
+        System.out.println(wordFind("the", lines));
 
     }
+    public static ArrayList<Integer> wordFind(String word, ArrayList<String> lines) {
+        ArrayList<Integer> words = new ArrayList<>();
+        for (int i = 0; i < lines.size(); i++) {
+            if (lines.get(i).contains(word)){
+                words.add(i);
+                System.out.println(words);
+            }
+        }
+        return words;
 
+    }
+}
